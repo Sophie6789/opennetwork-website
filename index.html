@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenNetwork — Open AI Innovation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="assets/ngo_logo_white_background.PNG" alt="OpenNetwork" class="nav-logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#get-involved">Get Involved</a></li>
+      </ul>
+      <button class="nav-cta" onclick="openModal('membership')">Join Us</button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <canvas id="heroBgCanvas" class="hero-canvas-bg"></canvas>
+    <div class="hero-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-logo-showcase fade-up">
+        <div class="logo-aura">
+          <div class="aura-ring a1"></div>
+          <div class="aura-ring a2"></div>
+          <div class="aura-ring a3"></div>
+        </div>
+        <img src="assets/ngo_logo_white_background.PNG" alt="OpenNetwork" class="hero-logo-img">
+      </div>
+      <div class="hero-badge fade-up delay-1">
+        <span class="badge-dot"></span>
+        Silicon Valley · Open AI Innovation
+      </div>
+      <h1 class="hero-title fade-up delay-1">
+        Open<span class="gradient-text">Network</span>
+      </h1>
+      <p class="hero-subtitle fade-up delay-2">
+        OpenNetwork is a Silicon Valley–born catalyst for open AI innovation, uniting global pioneers, capital, and infrastructure to transform breakthrough intelligence into real-world impact.
+      </p>
+      <div class="hero-actions fade-up delay-3">
+        <button class="btn btn-primary btn-glow" onclick="openModal('volunteer')">
+          <span>Become a Volunteer</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <button class="btn btn-secondary" onclick="scrollTo('#get-involved')">
+          Learn More
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </button>
+      </div>
+
+
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-grid">
+        <div class="section-text">
+          <span class="section-tag reveal">Who We Are</span>
+          <h2 class="section-title reveal">
+            A Global Force<br>for <span class="gradient-text">Open AI Innovation</span>
+          </h2>
+          <p class="section-desc reveal">
+            OpenNetwork is a Silicon Valley–born catalyst for open AI innovation, uniting global pioneers, capital, and infrastructure to transform breakthrough intelligence into real-world impact.
+          </p>
+          <div class="about-features reveal">
+            <div class="about-feature">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <h4>Trusted & Transparent</h4>
+                <p>Full financial transparency with annual impact reports published publicly.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div>
+                <h4>Global Reach</h4>
+                <p>Operating across 85 countries with local chapters and regional hubs.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <h4>Community Driven</h4>
+                <p>Every initiative is designed with and for the communities we serve.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-visual reveal">
+          <div class="network-visual">
+            <canvas id="networkCanvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Get Involved Section -->
+  <section class="section get-involved" id="get-involved">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">Get Involved</span>
+        <h2 class="section-title reveal">Three Ways to<br><span class="gradient-text">Make a Difference</span></h2>
+        <p class="section-subtitle reveal">Whether you give your time, join our community, or provide funding — every contribution matters.</p>
+      </div>
+      <div class="involvement-grid">
+        <!-- Volunteer Card -->
+        <div class="involvement-card reveal" data-type="volunteer">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="card-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="card-title">Volunteer</h3>
+          <p class="card-desc">
+            Contribute your skills and time to projects that create meaningful change. 
+            From remote opportunities to on-the-ground fieldwork, find your fit.
+          </p>
+          <ul class="card-perks">
+            <li>Flexible time commitment</li>
+            <li>Skills-based matching</li>
+            <li>Global project access</li>
+            <li>Training & certification</li>
+          </ul>
+          <button class="btn btn-card" onclick="openModal('volunteer')">
+            Apply as Volunteer
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+        <!-- Membership Card -->
+        <div class="involvement-card featured reveal" data-type="membership">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="card-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="card-title">Membership</h3>
+          <p class="card-desc">
+            Become a member and gain access to our global network, exclusive events, 
+            research publications, and decision-making processes.
+          </p>
+          <ul class="card-perks">
+            <li>Exclusive community access</li>
+            <li>Quarterly impact reports</li>
+            <li>Annual global summit invite</li>
+            <li>Voting rights on initiatives</li>
+          </ul>
+          <button class="btn btn-card btn-featured" onclick="openModal('membership')">
+            Become a Member
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+        <!-- Sponsor Card -->
+        <div class="involvement-card reveal" data-type="sponsor">
+          <div class="card-glow"></div>
+          <div class="card-icon-wrapper">
+            <div class="card-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 7v10l10 5V12L2 7z"/>
+                <path d="M22 7v10l-10 5V12l10-5z"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="card-title">Sponsor</h3>
+          <p class="card-desc">
+            Partner with us to fund critical projects. Your sponsorship directly powers 
+            education, healthcare, and sustainable development programs.
+          </p>
+          <ul class="card-perks">
+            <li>Brand visibility & recognition</li>
+            <li>CSR impact reporting</li>
+            <li>Direct project sponsorship</li>
+            <li>Tax-deductible contributions</li>
+          </ul>
+          <button class="btn btn-card" onclick="openModal('sponsor')">
+            Become a Sponsor
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-box reveal">
+        <div class="cta-bg-orbs">
+          <div class="cta-orb cta-orb-1"></div>
+          <div class="cta-orb cta-orb-2"></div>
+        </div>
+        <h2 class="cta-title">Ready to Create Change?</h2>
+        <p class="cta-desc">Join thousands of changemakers around the world. Your journey starts with a single step.</p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary btn-glow" onclick="openModal('volunteer')">Volunteer Now</button>
+          <button class="btn btn-primary btn-glow" onclick="openModal('membership')">Join as Member</button>
+          <button class="btn btn-primary btn-glow" onclick="openModal('sponsor')">Sponsor Us</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid-v2">
+        <div class="footer-brand-col">
+          <a href="#" class="footer-logo-link">
+            <img src="assets/ngo_logo_white_background.PNG" alt="OpenNetwork" class="footer-logo-img-lg">
+          </a>
+          <p class="footer-brand-desc">OpenNetwork is a Silicon Valley–born catalyst for open AI innovation, uniting global pioneers, capital, and infrastructure to transform breakthrough intelligence into real-world impact.</p>
+        </div>
+        <div class="footer-links-col">
+          <h4>Organization</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#get-involved">Our Programs</a></li>
+            <li><a href="#">Annual Report</a></li>
+            <li><a href="#">Partnerships</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="#" onclick="openModal('volunteer')">Volunteer</a></li>
+            <li><a href="#" onclick="openModal('membership')">Membership</a></li>
+            <li><a href="#" onclick="openModal('sponsor')">Sponsorship</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 OpenNetwork. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Overlay -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Volunteer Form -->
+      <div class="modal-form" id="form-volunteer" style="display:none;">
+        <div class="modal-header">
+          <div class="modal-icon volunteer-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h2>Apply as Volunteer</h2>
+          <p>Fill out the form below and our team will reach out to you.</p>
+        </div>
+        <form onsubmit="submitForm(event, 'volunteer')">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vol-name">Full Name *</label>
+              <input type="text" id="vol-name" name="name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label for="vol-email">Email Address *</label>
+              <input type="email" id="vol-email" name="email" required placeholder="john@example.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vol-phone">Phone Number</label>
+              <input type="tel" id="vol-phone" name="phone" placeholder="+1 (234) 567-8900">
+            </div>
+            <div class="form-group">
+              <label for="vol-location">Location *</label>
+              <input type="text" id="vol-location" name="location" required placeholder="City, Country">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="vol-skills">Skills & Expertise *</label>
+            <input type="text" id="vol-skills" name="skills" required placeholder="e.g. Teaching, Engineering, Marketing...">
+          </div>
+          <div class="form-group">
+            <label for="vol-availability">Availability</label>
+            <select id="vol-availability" name="availability">
+              <option value="">Select availability</option>
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="Weekends">Weekends only</option>
+              <option value="Remote">Remote / Flexible</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="vol-motivation">Why do you want to volunteer? *</label>
+            <textarea id="vol-motivation" name="motivation" required rows="4" placeholder="Tell us about your motivation and what you hope to achieve..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-submit">
+            <span class="btn-text">Submit Application</span>
+            <span class="btn-loading"><span class="spinner"></span>Submitting...</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Membership Form -->
+      <div class="modal-form" id="form-membership" style="display:none;">
+        <div class="modal-header">
+          <div class="modal-icon membership-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h2>Become a Member</h2>
+          <p>Join our community and help shape the future of social impact.</p>
+        </div>
+        <form onsubmit="submitForm(event, 'membership')">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="mem-name">Full Name *</label>
+              <input type="text" id="mem-name" name="name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label for="mem-email">Email Address *</label>
+              <input type="email" id="mem-email" name="email" required placeholder="john@example.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="mem-phone">Phone Number</label>
+              <input type="tel" id="mem-phone" name="phone" placeholder="+1 (234) 567-8900">
+            </div>
+            <div class="form-group">
+              <label for="mem-org">Organization</label>
+              <input type="text" id="mem-org" name="organization" placeholder="Company or Organization name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="mem-type">Membership Type *</label>
+            <select id="mem-type" name="membership_type" required>
+              <option value="">Select type</option>
+              <option value="Individual">Individual</option>
+              <option value="Student">Student</option>
+              <option value="Professional">Professional</option>
+              <option value="Organization">Organization</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mem-interests">Areas of Interest</label>
+            <input type="text" id="mem-interests" name="interests" placeholder="e.g. Education, Healthcare, Environment...">
+          </div>
+          <div class="form-group">
+            <label for="mem-message">Additional Message</label>
+            <textarea id="mem-message" name="message" rows="3" placeholder="Anything else you'd like us to know..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-submit">
+            <span class="btn-text">Submit Application</span>
+            <span class="btn-loading"><span class="spinner"></span>Submitting...</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Sponsor Form -->
+      <div class="modal-form" id="form-sponsor" style="display:none;">
+        <div class="modal-header">
+          <div class="modal-icon sponsor-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 7v10l10 5V12L2 7z"/><path d="M22 7v10l-10 5V12l10-5z"/></svg>
+          </div>
+          <h2>Become a Sponsor</h2>
+          <p>Partner with us to create lasting impact through strategic sponsorship.</p>
+        </div>
+        <form onsubmit="submitForm(event, 'sponsor')">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sp-name">Contact Name *</label>
+              <input type="text" id="sp-name" name="name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label for="sp-email">Email Address *</label>
+              <input type="email" id="sp-email" name="email" required placeholder="john@example.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sp-phone">Phone Number</label>
+              <input type="tel" id="sp-phone" name="phone" placeholder="+1 (234) 567-8900">
+            </div>
+            <div class="form-group">
+              <label for="sp-company">Company / Organization *</label>
+              <input type="text" id="sp-company" name="company" required placeholder="Company name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="sp-level">Sponsorship Level *</label>
+            <select id="sp-level" name="sponsorship_level" required>
+              <option value="">Select level</option>
+              <option value="Platinum">Platinum — $50,000+</option>
+              <option value="Gold">Gold — $25,000+</option>
+              <option value="Silver">Silver — $10,000+</option>
+              <option value="Bronze">Bronze — $5,000+</option>
+              <option value="Custom">Custom Amount</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="sp-message">Message *</label>
+            <textarea id="sp-message" name="message" required rows="4" placeholder="Tell us about your sponsorship goals and how you'd like to partner..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-submit">
+            <span class="btn-text">Submit Sponsorship Inquiry</span>
+            <span class="btn-loading"><span class="spinner"></span>Submitting...</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Success State -->
+      <div class="modal-success" id="modalSuccess" style="display:none;">
+        <div class="success-animation">
+          <svg class="checkmark" viewBox="0 0 52 52">
+            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+          </svg>
+        </div>
+        <h2>Thank You!</h2>
+        <p>Your application has been submitted successfully. Our team will review it and get back to you within 2-3 business days.</p>
+        <button class="btn btn-primary" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
